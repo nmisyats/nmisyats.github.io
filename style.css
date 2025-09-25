@@ -1,0 +1,672 @@
+/* Variables */
+:root
+{
+    --gray-text-color: rgb(72, 72, 72);
+    --section-title-size: 2em;
+    --profile-width: 300px;
+    --content-max-width: 750px;
+    --links-rest-color: rgb(225, 250, 242);
+    --links-hover-color: rgb(140, 216, 191);
+    --links-text-color: rgb(44, 109, 109);
+    --links-text-visited-color: rgb(104, 62, 85);
+}
+
+/* Global */
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    /* font-family: 'Open Sans', sans-serif; */
+    /*font-family: 'LMSansQuot8-Regular', monospace;*/
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+}
+
+h2
+{
+    margin-bottom: 0.5em;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:link
+{
+    color: var(--links-text-color);
+}
+
+a:visited
+{
+    color: var(--links-text-visited-color);
+}
+
+.rounded-container
+{
+    box-shadow: 0px 3px 6px 2px rgb(218, 218, 218);
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.side-comment
+{
+    font-style: italic;
+    font-size: 0.8em !important;
+}
+
+.show-mobile
+{
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .show-desktop
+    {
+        display: none;
+    }
+
+    .show-mobile
+    {
+        display: block;
+    }
+}
+
+
+#container
+{
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr min(50%, var(--content-max-width)) 1fr;
+    grid-gap: 20px;
+    justify-content: end;
+}
+
+main
+{
+    width: 100%;
+    grid-column: 2 / span 1;
+}
+
+/* Profile */
+
+#profile
+{
+    width: var(--profile-width);
+    height: fit-content;
+    grid-column: 1 / span 1;
+    margin: 0 0 0 auto;
+
+    border-top: solid 5px;
+    border-image: linear-gradient(90deg,rgba(167,26,158,1) 0%, rgba(117,195,205,1) 100%) 30;
+}
+
+#aside-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.cv-link
+{
+    color: black;
+    font-size: 1.1em;
+    font-weight: bolder;
+    background-color: var(--links-rest-color);
+    padding: 0.2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 5px;
+}
+
+.cv-link:link
+{
+    color: black;
+}
+
+.cv-link:visited
+{
+    color: black;
+}
+
+.cv-link:hover
+{
+    background-color: var(--links-hover-color);
+}
+
+#name
+{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.75em;
+}
+
+#current-status
+{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: rgb(0, 0, 0);
+}
+
+#current-school
+{
+    margin-top: 0em;
+    font-weight: bold;
+}
+
+address
+{
+    font-style: normal;
+    font-size: small;
+    margin-bottom: 1.5em;
+}
+
+#links
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1.5em;
+}
+
+#links a, .pub-links a
+{
+    background: var(--links-rest-color);
+    border-radius: 4px;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-bottom: 0.3em;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+#links a:link, #links a:hover, #links a:visited, #links a:active
+{
+    text-decoration: none;
+    color: black;
+}
+
+#links a:not(:last-child)
+{
+    margin-right: 0.3em;
+}
+
+#links a:hover, .pub-links a:hover
+{
+    background-color: var(--links-hover-color);
+}
+
+#links a, .cv-link, .pub-links a
+{
+    transition-property: background-color;
+    transition-duration: 0.15s;
+}
+
+@media (max-width: 1100px) {
+    main
+    {
+        width: 100%;
+    }
+
+    #container
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    #profile
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: none;
+        width: 90%;
+        max-width: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    #aside-header
+    {
+        width: 100%;
+        position: relative;
+    }
+
+    #name
+    {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .cv-link
+    {
+        /* position: absolute;
+        right: 0;
+        top: 0.2em; */
+        margin-bottom: 1em;
+    }
+
+    #links
+    {
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+/* Navigation */
+
+nav
+{
+    float: right;
+}
+
+nav ul
+{
+    top: 4em;
+    margin-left: 1em;
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    /*transform: translateX(-100%);
+    margin-top: 2em;*/
+}
+
+nav ul li
+{
+    width: 150px;
+}
+
+.nav-link
+{
+    display: block;
+    padding: 0.5em;
+    transition: 0.15s linear;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link:active
+{
+    color: var(--gray-text-color);
+}
+
+.nav-link:hover
+{
+    background-color: rgb(246, 252, 251);
+    box-shadow: -3px 0px 0 rgb(124, 167, 154);
+}
+
+.nav-link-current
+{
+    background-color: rgb(235, 250, 247);
+    box-shadow: -3px 0px 0 rgb(124, 167, 154);
+}
+
+nav i
+{
+    width: 20%;
+}
+
+@media (max-width: 850px) {
+    nav ul
+    {
+        margin-left: 0.5em;
+    }
+
+    .nav-link span
+    {
+        display: none;
+    }
+
+    .nav-link
+    {
+        width: 30px;
+    }
+}
+
+/* About */
+
+#about h2
+{
+    margin-top: 0;
+    font-size: var(--section-title-size);
+}
+
+#biography p
+{
+    line-height: 1.7em;
+    /*line-height: 1.4em;*/
+    /* text-align: justify;
+    text-justify: inter-word; */
+}
+
+/* Interests and education */
+
+#interests-education
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#interests-education h3
+{
+    font-size: 1.2em;
+}
+
+/* Interests */
+
+#interests
+{
+    width: 30%;
+}
+
+#interests li
+{
+    margin-bottom: 0.5em;
+}
+
+/* Education */
+
+#education
+{
+    width: 67%;
+}
+
+.degree-entry
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.degree-name, .degree-date
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.degree-school
+{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: var(--gray-text-color);
+    font-size: 0.8em;
+}
+
+.degree-date
+{
+    text-align: right;
+    width: 80px;
+    margin-right: 10px;
+    color: var(--gray-text-color);
+    font-size: 0.8em;
+}
+
+@media (max-width: 1500px) {
+    #interests-education
+    {
+        flex-direction: column;
+    }
+
+    #interests
+    {
+        width: 100%;
+    }
+
+    #interests ul
+    {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #interests ul li:not(:last-child):after
+    {
+        content: "·";
+        margin: 0 10px;
+    }
+
+    #education
+    {
+        width: 100%;
+    }
+}
+
+/* Common to project and experience */
+
+#projects, #experience, #publications
+{
+    margin-top: 2em;
+}
+
+#experience h2, #projects h2, #publications h2
+{
+    margin-top: 0;
+    font-size: var(--section-title-size);
+}
+
+/* Experience */
+
+.experience-entry
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.experience-name, .experience-date
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.experience-subject, .experience-location
+{
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    color: var(--gray-text-color);
+    font-size: 0.9em;
+}
+
+.experience-location
+{
+    font-weight: bold;
+}
+
+.experience-date
+{
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+    color: var(--gray-text-color);
+    font-size: 0.8em;
+}
+
+@media (max-width: 1500px) {
+    .experience-entry
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .experience-date
+    {
+        text-align: left;
+        width: 100%;
+        margin-right: 10px;
+        color: var(--gray-text-color);
+        font-size: 0.8em;
+    }
+}
+
+/* Publications */
+
+.publication-entry
+{
+    margin-top: 0.5em;
+    border-left: solid;
+    padding-left: 0.5em;
+    border-color: rgb(210, 230, 239);
+}
+
+.publication-entry p
+{
+    margin-bottom: 0;
+}
+
+.pub-title
+{
+    font-weight: bold;
+}
+
+.pub-authors
+{
+    color: var(--gray-text-color);
+}
+
+.pub-me-author
+{
+    font-weight: bold;
+}
+
+.pub-conf
+{
+    font-style: italic;
+}
+
+.pub-links
+{
+    margin-top: 0.4em;
+}
+
+.pub-links a:link
+{
+    font-size: 1em;
+    color: black;
+}
+
+.pub-links a:visited
+{
+    color: black;
+}
+
+/* Projects */
+
+#projects
+{
+    border-top: solid 2px;
+    border-image: linear-gradient(to left,rgb(215, 136, 209) 0%, rgba(117,195,205,1) 30%, rgba(255, 255, 255, 0) 80%) 30;
+    
+    /*border-top: dashed 2px black;*/
+}
+
+#projects-container
+{
+    width: 100%;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.project
+{
+    break-inside: avoid-column;
+    padding: 0.5em;
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    #projects-container
+    {
+        column-count: 1;
+    }
+}
+
+.project-img-container
+{
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.project-img
+{
+    width: 100%;
+    height: auto;
+    transition-property: filter;
+    transition-duration: 0.25s;
+}
+
+.project-img-container:hover .project-img
+{
+    filter: blur(4px);
+}
+
+.project-img-hover-icon
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0);
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 2em;
+    transition-property: color;
+    transition-duration: 0.25s;
+}
+
+.project-img-container:hover .project-img-hover-icon
+{
+    color: rgb(255, 255, 255);
+}
+
+.project-title
+{
+    margin: 0;
+    margin-top: 0.7em;
+}
+
+.project-title a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.project-title a:hover
+{
+    border-bottom: 1px solid black;
+}
+
+.project-description p
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--gray-text-color);
+    font-size: 0.9em;
+}
