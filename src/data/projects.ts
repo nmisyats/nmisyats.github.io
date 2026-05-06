@@ -23,18 +23,18 @@ export const projects = [
     descriptionHtml: "Implementation of several procedural rendering techniques such as raymarching, pathtracing, noise and physically based rendering, using only GLSL shaders.",
   },
   {
-    title: "Boids and marching cubes",
-    href: "https://github.com/nmisyats/Boids-and-Marching-Cubes",
-    image: "/imgs/boids-marching-cubes.png",
-    alt: "Boids in marching cubes terrain",
-    descriptionHtml: "Procedural terrain generation via the marching cubes algorithm accelerated on the GPU with OpenGL compute shaders. Boids fly around in the generated terrain, simulating flocking behaviour.",
-  },
-  {
     title: "Online calculator for multiple gravity assists trajectories",
     href: "https://github.com/nmisyats/KSP-MGA-Planner",
     image: "https://raw.githubusercontent.com/Krafpy/KSP-MGA-Planner/master/imgs/example_trajectory_2.png",
     alt: "KSP MGA Planner Screenshot",
     descriptionHtml: "A tool to compute optimal interplanetary trajectories with multiple gravity assists for the video game Kerbal Space Program.",
+  },
+  {
+    title: "Boids and marching cubes",
+    href: "https://github.com/nmisyats/Boids-and-Marching-Cubes",
+    image: "/imgs/boids-marching-cubes.png",
+    alt: "Boids in marching cubes terrain",
+    descriptionHtml: "Procedural terrain generation via the marching cubes algorithm accelerated on the GPU with OpenGL compute shaders. Boids fly around in the generated terrain, simulating flocking behaviour.",
   },
   {
     title: "x86 bootsector experiments",

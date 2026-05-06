@@ -560,23 +560,22 @@ nav i
 #projects-container
 {
     width: 100%;
-    column-count: 2;
-    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
 }
 
 .project
 {
-    break-inside: avoid-column;
     padding: 0.5em;
     border: solid 1px rgb(193, 193, 193);
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
     #projects-container
     {
-        column-count: 1;
+        grid-template-columns: 1fr;
     }
 }
 
