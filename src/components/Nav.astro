@@ -1,0 +1,22 @@
+---
+const items = [
+  { href: "#about", label: "About", icon: "fa-solid fa-user" },
+  { href: "#publications", label: "Publications", icon: "fa-solid fa-graduation-cap" },
+  { href: "#projects", label: "Projects", icon: "fa-solid fa-code" },
+];
+---
+
+<nav id="navbar">
+  <ul>
+    {
+      items.map((item) => (
+        <li>
+          <a class="nav-link no-new-tab" href={item.href}>
+            <i class={item.icon}></i>
+            <span> {item.label}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

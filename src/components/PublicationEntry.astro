@@ -1,0 +1,28 @@
+---
+import Icon from "./Icon.astro";
+
+const { publication } = Astro.props;
+---
+
+<div class="publication-entry">
+  <p>
+    <span class="pub-title">{publication.title}</span><br />
+    <span class="pub-authors">
+      {
+        publication.authors.map((author) => (
+          <span class:list={{ "pub-me-author": author.isMe }}>{author.name}</span>
+        ))
+      }
+    </span><br />
+    <span class="pub-conf">{publication.conference}</span>
+  </p>
+  <p class="pub-links">
+    {
+      publication.links.map((link) => (
+        <a href={link.href}>
+          <Icon name={link.icon} /> {link.label}
+        </a>
+      ))
+    }
+  </p>
+</div>

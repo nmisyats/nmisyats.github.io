@@ -1,0 +1,18 @@
+---
+const { project } = Astro.props;
+---
+
+<div class="project">
+  <a class="project-img-container" href={project.href}>
+    <img class="project-img" src={project.image} alt={project.alt} />
+    <i class="fa-solid fa-arrow-up-right-from-square project-img-hover-icon"></i>
+  </a>
+  <article class="project-description">
+    <h4 class="project-title">
+      <a href={project.href}>
+        {project.italicTitle ? <span style="font-style: italic;">{project.title}</span> : project.title}
+      </a>
+    </h4>
+    <p set:html={project.descriptionHtml} />
+  </article>
+</div>

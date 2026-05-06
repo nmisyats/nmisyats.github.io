@@ -1,0 +1,34 @@
+---
+import Icon from "./Icon.astro";
+import { links } from "../data/links";
+import { profile } from "../data/profile";
+---
+
+<aside id="profile" class="rounded-container">
+  <header id="aside-header">
+    <h1 id="name">{profile.name}</h1>
+    <a href={profile.cv} class="cv-link no-new-tab show-desktop">
+      <Icon name="fa-solid fa-file-lines" /> CV
+    </a>
+  </header>
+  <p id="current-status">{profile.status}</p>
+  <p id="current-school">
+    <a href={profile.school.href}>{profile.school.name}</a>
+  </p>
+  <a href={profile.cv} class="cv-link no-new-tab show-mobile">
+    <Icon name="fa-solid fa-file-lines" /> CV
+  </a>
+  <address>
+    <Icon name="fa-solid fa-envelope" />
+    <span id="email" data-parts={profile.emailParts.join(",")}></span>
+  </address>
+  <div id="links">
+    {
+      links.map((link) => (
+        <a href={link.href}>
+          <Icon name={link.icon} /> {link.label}
+        </a>
+      ))
+    }
+  </div>
+</aside>

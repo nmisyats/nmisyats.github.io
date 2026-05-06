@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EducationEntry from "../components/EducationEntry.astro";
+import Nav from "../components/Nav.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import { education } from "../data/education";
+import { biography, interests } from "../data/profile";
+import { projects } from "../data/projects";
+import { publications } from "../data/publications";
+---
+
+<BaseLayout>
+  <div id="container">
+    <ProfileCard />
+
+    <main>
+      <Nav />
+
+      <section id="about">
+        <h2>About</h2>
+        <div id="biography">
+          {biography.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div id="interests-education">
+          <section id="interests">
+            <h3>Interests</h3>
+            <ul>
+              {interests.map((interest) => <li>{interest}</li>)}
+            </ul>
+          </section>
+
+          <section id="education">
+            <h3>Education</h3>
+            {education.map((item) => <EducationEntry item={item} />)}
+          </section>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        {publications.map((publication) => <PublicationEntry publication={publication} />)}
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>A selection of some of my most notable projects with online content.</p>
+        <div id="projects-container">
+          {projects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

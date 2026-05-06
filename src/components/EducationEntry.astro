@@ -1,0 +1,13 @@
+---
+const { item } = Astro.props;
+---
+
+<div class="degree-entry">
+  <div>
+    <p class="degree-date">{item.date}</p>
+  </div>
+  <div class="degree-info">
+    <h4 class="degree-name">{item.degree}</h4>
+    <p class="degree-school">{item.school}</p>
+  </div>
+</div>

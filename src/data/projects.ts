@@ -1,0 +1,45 @@
+export const projects = [
+  {
+    title: "Island",
+    italicTitle: true,
+    href: "https://github.com/nmisyats/Island",
+    image: "/imgs/island_screenshot.png",
+    alt: "Island intro screenshot",
+    descriptionHtml: "A 4kB demo, ranked 9th at Revision 2024.",
+  },
+  {
+    title: "Shader experiments",
+    href: "https://www.shadertoy.com/user/Krafpy/",
+    image: "/imgs/shader_screenshot.png",
+    alt: "Planet shader screenshot",
+    descriptionHtml: "Implementation of several procedural rendering techniques such as raymarching, pathtracing, noise and physically based rendering, using only GLSL shaders.",
+  },
+  {
+    title: "Boids and marching cubes",
+    href: "https://github.com/nmisyats/Boids-and-Marching-Cubes",
+    image: "/imgs/boids-marching-cubes.png",
+    alt: "Boids in marching cubes terrain",
+    descriptionHtml: "Procedural terrain generation via the marching cubes algorithm accelerated on the GPU with OpenGL compute shaders. Boids fly around in the generated terrain, simulating flocking behaviour.",
+  },
+  {
+    title: "Online calculator for multiple gravity assists trajectories",
+    href: "https://github.com/nmisyats/KSP-MGA-Planner",
+    image: "https://raw.githubusercontent.com/Krafpy/KSP-MGA-Planner/master/imgs/example_trajectory_2.png",
+    alt: "KSP MGA Planner Screenshot",
+    descriptionHtml: "A tool to compute optimal interplanetary trajectories with multiple gravity assists for the video game Kerbal Space Program.",
+  },
+  {
+    title: "x86 bootsector experiments",
+    href: "https://pastebin.com/u/Krafpy",
+    image: "/imgs/bootsector_illustration.png",
+    alt: "Bootsector program illustration",
+    descriptionHtml: 'Implementation of a <a href="https://pastebin.com/dwC4hBK7">Mandelbrot set renderer</a> and a <a href="https://pastebin.com/AxhkaNQe">two-player PONG</a> in x86 assembly in less than 512 bytes, executable in a bootsector.',
+  },
+  {
+    title: "Robot neuroevolution",
+    href: "https://github.com/nmisyats/Robot-Neuroevolution",
+    image: "/imgs/robot_evolution_training.png",
+    alt: "Robots learning through evolution",
+    descriptionHtml: "Training a neural network to drive robots in a simulated environment via a genetic algorithm, and testing the trained network in a real robot.",
+  },
+];
