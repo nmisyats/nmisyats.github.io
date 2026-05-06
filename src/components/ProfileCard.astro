@@ -18,9 +18,11 @@ import { profile } from "../data/profile";
   <a href={profile.cv} class="cv-link no-new-tab show-mobile">
     <Icon name="fa-solid fa-file-lines" /> CV
   </a>
-  <address>
+  <address id="contact-info">
+    <span class="profile-link-row profile-link-static">
     <Icon name="fa-solid fa-envelope" />
     <span id="email" data-parts={profile.emailParts.join(",")}></span>
+    </span>
   </address>
   <div id="links">
     {

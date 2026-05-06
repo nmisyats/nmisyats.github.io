@@ -2,7 +2,7 @@ export const education = [
   {
     date: "In progress",
     degree: "MASc. Electrical and Computer Engineering",
-    school: "University of British Columbia",
+    school: "The University of British Columbia",
   },
   {
     date: "2022-2025",

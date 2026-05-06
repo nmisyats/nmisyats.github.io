@@ -1,11 +1,19 @@
 export const projects = [
   {
+    title: "Marbles",
+    italicTitle: true,
+    href: "https://github.com/nmisyats/Marbles",
+    image: "/imgs/marbles_screenshot.png",
+    alt: "Marbles intro screenshot",
+    descriptionHtml: "A 4kB demo implementing smoothed-particle hydrodynamics and real-time physically based rendering. Ranked 7th at Revision 2026.",
+  },
+  {
     title: "Island",
     italicTitle: true,
     href: "https://github.com/nmisyats/Island",
     image: "/imgs/island_screenshot.png",
     alt: "Island intro screenshot",
-    descriptionHtml: "A 4kB demo, ranked 9th at Revision 2024.",
+    descriptionHtml: "A 4kB demo implementing raymarching in a hexagonal tiling. Ranked 9th at Revision 2024.",
   },
   {
     title: "Shader experiments",

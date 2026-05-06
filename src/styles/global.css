@@ -166,20 +166,49 @@ main
 address
 {
     font-style: normal;
-    font-size: small;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.35em;
 }
 
 #links
 {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 1.5em;
+    flex-direction: column;
+    gap: 0.35em;
+    margin-top: 0;
 }
 
-#links a, .pub-links a
+.profile-link-row
+{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 0.95em;
+    font-weight: normal;
+}
+
+.profile-link-row i
+{
+    width: 1.4em;
+}
+
+#links a
+{
+    color: black;
+}
+
+#links a:link, #links a:hover, #links a:visited, #links a:active
+{
+    text-decoration: none;
+    color: black;
+}
+
+#links a:hover
+{
+    color: var(--links-text-color);
+}
+
+.pub-links a
 {
     background: var(--links-rest-color);
     border-radius: 4px;
@@ -191,25 +220,20 @@ address
     font-weight: bold;
 }
 
-#links a:link, #links a:hover, #links a:visited, #links a:active
-{
-    text-decoration: none;
-    color: black;
-}
-
-#links a:not(:last-child)
-{
-    margin-right: 0.3em;
-}
-
-#links a:hover, .pub-links a:hover
+.pub-links a:hover
 {
     background-color: var(--links-hover-color);
 }
 
-#links a, .cv-link, .pub-links a
+.cv-link, .pub-links a
 {
     transition-property: background-color;
+    transition-duration: 0.15s;
+}
+
+.profile-link-row
+{
+    transition-property: color;
     transition-duration: 0.15s;
 }
 
@@ -263,7 +287,7 @@ address
 
     #links
     {
-        justify-content: center;
+        align-items: center;
         margin-top: 0;
     }
 }
@@ -506,6 +530,9 @@ nav i
 
 .pub-links
 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
     margin-top: 0.4em;
 }
 

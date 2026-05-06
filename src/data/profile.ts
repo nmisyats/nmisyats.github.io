@@ -2,7 +2,7 @@ export const profile = {
   name: "Nazar Misyats",
   status: "MASc ECE student",
   school: {
-    name: "University of British Columbia",
+    name: "The University of British Columbia",
     href: "https://www.ubc.ca/",
   },
   cv: "/files/cv_nazar_misyats.pdf",
@@ -15,8 +15,8 @@ export const biography = [
 ];
 
 export const interests = [
-  "Robotics",
   "Computer architecture",
-  "Astrophysics",
   "Computer graphics",
+  "Differentiable physics",
+  "Robotics"
 ];
