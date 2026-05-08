@@ -7,7 +7,7 @@ import { profile } from "../data/profile";
 <aside id="profile" class="rounded-container">
   <header id="aside-header">
     <h1 id="name">{profile.name}</h1>
-    <a href={profile.cv} class="cv-link no-new-tab show-desktop">
+    <a href={profile.cv} class="cv-link no-new-tab">
       <Icon name="fa-solid fa-file-lines" /> CV
     </a>
   </header>
@@ -15,9 +15,6 @@ import { profile } from "../data/profile";
   <p id="current-school">
     <a href={profile.school.href}>{profile.school.name}</a>
   </p>
-  <a href={profile.cv} class="cv-link no-new-tab show-mobile">
-    <Icon name="fa-solid fa-file-lines" /> CV
-  </a>
   <address id="contact-info">
     <span class="profile-link-row profile-link-static">
     <Icon name="fa-solid fa-envelope" />
